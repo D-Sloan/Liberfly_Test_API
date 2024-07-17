@@ -241,12 +241,12 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         if (!$product) {
-            return response()->json(['message' => 'Product not found.'], 404);
+            return response()->json(['message' => 'Product not found'], 404);
         }
 
         $product->delete();
 
-        return response()->json(['message' => 'Product deleted successfully.']);
+        return response()->json(['message' => 'Product deleted successfully']);
     }
 
     private function rulesInsert()
